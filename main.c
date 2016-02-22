@@ -7,7 +7,7 @@
 #include "draw.h"
 
 int main() {
-
+  //500 by 500 pixels
   screen s;
   color c;
  
@@ -17,7 +17,44 @@ int main() {
   c.blue = 0;
   
   clear_screen(s);
-
+    c.red = 0;
+  c.green = 45;
+  c.blue = 187;
+  // draw_line(0,0,499,499,s,c);
+  int k =0;
+  while (k<500){
+  draw_line(0,0,XRES,k,s,c);
+  k+=10;
+  }
+  k = 5;
+  c.red = 255;
+  c.green = 255;
+  c.blue = 0;
+  while (k<500){
+    draw_line(0,0,k,YRES,s,c);
+  k+=10;
+  }
+  draw_line(0,1 , 400,YRES,s,c);
+  k = 0;
+  //int j = 20;
+c.red = 255;
+  c.green = 0;
+  c.blue = 0;
+  while (k<500){
+    draw_line(0,YRES,XRES,k,s,c);
+    k+=10;
+    //j = (j + 50)%YRES;
+  }
+c.red = 0;
+  c.green = 255;
+  c.blue = 229;
+  k=0;
+  while (k<500){
+    draw_line(0,YRES,k,0,s,c);
+    k+=10;
+    //j = (j + 50)%YRES;
+  }
+/*
 
   //octant 1
   draw_line( 0, 0, XRES-1, YRES - 75, s, c);
@@ -48,7 +85,7 @@ int main() {
   //horizontal, vertical line
   draw_line( 0, YRES / 2, XRES - 1, YRES / 2, s, c);
   draw_line( XRES / 2, 0, XRES / 2, YRES - 1, s, c);
-  
+  */
   display(s);
   save_extension(s, "lines.png");
 } 

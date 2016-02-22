@@ -44,7 +44,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   //----------------------------
   
   if (1< m ) {//OCT 2 AND 5
-    d = a + 2*a;
+    d = a + 2*b;
     while(y0 <= y1){
       plot(s,c,x0,y0);
       if(d < 0){
@@ -52,12 +52,12 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 	d += 2*a;
       }
       y0 += 1;
-      d +=2*a;
+      d +=2*b;
     }
   }
   //--------------------------------
   if(m<= -1){//OCT 3 AND 6
-    d = a - 2*a;
+    d = a - 2*b;
     while(y0 >= y1){
       plot(s,c,x0,y0);
       if(d > 0){
