@@ -21,9 +21,9 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   //color = pixel "object"
   int a = y1-y0;
   int b = x0 - x1;
-  int c = b * -1 *y_int;
+//  int c = b * -1 *y_int;
   
-  int d //= 2*a +  b
+  int d; //= 2*a +  b
     //m is the slope, using a floatie when i shouldnt
     float m;
   m = (float)a;
@@ -44,7 +44,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   //----------------------------
   
   if (1< m ) {//OCT 2 AND 5
-    d = A + 2*a;
+    d = a + 2*a;
     while(y0 <= y1){
       plot(s,c,x0,y0);
       if(d < 0){
@@ -57,7 +57,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   }
   //--------------------------------
   if(m<= -1){//OCT 3 AND 6
-    d = A - 2*a;
+    d = a - 2*a;
     while(y0 >= y1){
       plot(s,c,x0,y0);
       if(d > 0){
