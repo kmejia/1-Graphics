@@ -70,7 +70,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   }
   
   //-------------------------------
-  if(slope < 0 && slope > -1){//OCT 4 AND 8 
+  if((m < 0) && (m > -1)){//OCT 4 AND 8 
     d = 2*a - b;
     while(x0 <= x1){
       plot(s,c,x0,y0);
